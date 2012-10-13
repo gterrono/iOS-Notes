@@ -19,11 +19,7 @@
 		D5B3FC3D162A12AF0033C0F7 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FC3B162A12AF0033C0F7 /* MainStoryboard_iPhone.storyboard */; };
 		D5B3FC40162A12AF0033C0F7 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FC3E162A12AF0033C0F7 /* MainStoryboard_iPad.storyboard */; };
 		D5B3FC43162A12B00033C0F7 /* GRTFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B3FC42162A12B00033C0F7 /* GRTFirstViewController.m */; };
-		D5B3FC45162A12B00033C0F7 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FC44162A12B00033C0F7 /* first.png */; };
-		D5B3FC47162A12B00033C0F7 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FC46162A12B00033C0F7 /* first@2x.png */; };
 		D5B3FC4A162A12B00033C0F7 /* GRTSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B3FC49162A12B00033C0F7 /* GRTSecondViewController.m */; };
-		D5B3FC4C162A12B00033C0F7 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FC4B162A12B00033C0F7 /* second.png */; };
-		D5B3FC4E162A12B00033C0F7 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FC4D162A12B00033C0F7 /* second@2x.png */; };
 		D5B3FC56162A12B10033C0F7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B3FC55162A12B10033C0F7 /* SenTestingKit.framework */; };
 		D5B3FC57162A12B10033C0F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B3FC23162A12AF0033C0F7 /* UIKit.framework */; };
 		D5B3FC58162A12B10033C0F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B3FC25162A12AF0033C0F7 /* Foundation.framework */; };
@@ -33,6 +29,10 @@
 		D5B3FCC1162A14720033C0F7 /* GRTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B3FCBD162A14720033C0F7 /* GRTMasterViewController.m */; };
 		D5B3FCC2162A14720033C0F7 /* GRTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B3FCBF162A14720033C0F7 /* GRTDetailViewController.m */; };
 		D5B3FCC3162A14720033C0F7 /* GRTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B3FCBF162A14720033C0F7 /* GRTDetailViewController.m */; };
+		D5B3FCC5162A1D880033C0F7 /* map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FCC4162A1D880033C0F7 /* map-marker.png */; };
+		D5B3FCC6162A1D880033C0F7 /* map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FCC4162A1D880033C0F7 /* map-marker.png */; };
+		D5B3FCC8162A1DAA0033C0F7 /* todo.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FCC7162A1DAA0033C0F7 /* todo.png */; };
+		D5B3FCC9162A1DAA0033C0F7 /* todo.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FCC7162A1DAA0033C0F7 /* todo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +63,8 @@
 		D5B3FC3F162A12AF0033C0F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		D5B3FC41162A12AF0033C0F7 /* GRTFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRTFirstViewController.h; sourceTree = "<group>"; };
 		D5B3FC42162A12B00033C0F7 /* GRTFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRTFirstViewController.m; sourceTree = "<group>"; };
-		D5B3FC44162A12B00033C0F7 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		D5B3FC46162A12B00033C0F7 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		D5B3FC48162A12B00033C0F7 /* GRTSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRTSecondViewController.h; sourceTree = "<group>"; };
 		D5B3FC49162A12B00033C0F7 /* GRTSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GRTSecondViewController.m; sourceTree = "<group>"; };
-		D5B3FC4B162A12B00033C0F7 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		D5B3FC4D162A12B00033C0F7 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		D5B3FC54162A12B10033C0F7 /* NotesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B3FC55162A12B10033C0F7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D5B3FC5D162A12B10033C0F7 /* NotesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotesTests-Info.plist"; sourceTree = "<group>"; };
@@ -79,6 +75,8 @@
 		D5B3FCBD162A14720033C0F7 /* GRTMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTMasterViewController.m; sourceTree = "<group>"; };
 		D5B3FCBE162A14720033C0F7 /* GRTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTDetailViewController.h; sourceTree = "<group>"; };
 		D5B3FCBF162A14720033C0F7 /* GRTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTDetailViewController.m; sourceTree = "<group>"; };
+		D5B3FCC4162A1D880033C0F7 /* map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-marker.png"; sourceTree = "<group>"; };
+		D5B3FCC7162A1DAA0033C0F7 /* todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +136,8 @@
 		D5B3FC29162A12AF0033C0F7 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				D5B3FCC7162A1DAA0033C0F7 /* todo.png */,
+				D5B3FCC4162A1D880033C0F7 /* map-marker.png */,
 				D5B3FCBC162A14720033C0F7 /* GRTMasterViewController.h */,
 				D5B3FCBD162A14720033C0F7 /* GRTMasterViewController.m */,
 				D5B3FCBE162A14720033C0F7 /* GRTDetailViewController.h */,
@@ -148,12 +148,8 @@
 				D5B3FC3E162A12AF0033C0F7 /* MainStoryboard_iPad.storyboard */,
 				D5B3FC41162A12AF0033C0F7 /* GRTFirstViewController.h */,
 				D5B3FC42162A12B00033C0F7 /* GRTFirstViewController.m */,
-				D5B3FC44162A12B00033C0F7 /* first.png */,
-				D5B3FC46162A12B00033C0F7 /* first@2x.png */,
 				D5B3FC48162A12B00033C0F7 /* GRTSecondViewController.h */,
 				D5B3FC49162A12B00033C0F7 /* GRTSecondViewController.m */,
-				D5B3FC4B162A12B00033C0F7 /* second.png */,
-				D5B3FC4D162A12B00033C0F7 /* second@2x.png */,
 				D5B3FC2A162A12AF0033C0F7 /* Supporting Files */,
 			);
 			path = Notes;
@@ -270,10 +266,8 @@
 				D5B3FC3A162A12AF0033C0F7 /* Default-568h@2x.png in Resources */,
 				D5B3FC3D162A12AF0033C0F7 /* MainStoryboard_iPhone.storyboard in Resources */,
 				D5B3FC40162A12AF0033C0F7 /* MainStoryboard_iPad.storyboard in Resources */,
-				D5B3FC45162A12B00033C0F7 /* first.png in Resources */,
-				D5B3FC47162A12B00033C0F7 /* first@2x.png in Resources */,
-				D5B3FC4C162A12B00033C0F7 /* second.png in Resources */,
-				D5B3FC4E162A12B00033C0F7 /* second@2x.png in Resources */,
+				D5B3FCC5162A1D880033C0F7 /* map-marker.png in Resources */,
+				D5B3FCC8162A1DAA0033C0F7 /* todo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +276,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5B3FC60162A12B10033C0F7 /* InfoPlist.strings in Resources */,
+				D5B3FCC6162A1D880033C0F7 /* map-marker.png in Resources */,
+				D5B3FCC9162A1DAA0033C0F7 /* todo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

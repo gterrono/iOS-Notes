@@ -37,7 +37,7 @@
         <scene sceneID="LVJ-Q7-P1z">
             <objects>
                 <navigationController definesPresentationContext="YES" id="BmV-vH-40x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1rY-on-wOd"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="todo.png" id="1rY-on-wOd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="APr-SA-sea">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -81,7 +81,7 @@
                             <constraint firstAttribute="centerY" secondItem="21" secondAttribute="centerY" type="user" id="yWk-L2-m9F"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map-marker.png" id="7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,7 +141,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
+        <image name="map-marker.png" width="16" height="26"/>
+        <image name="todo.png" width="18" height="19"/>
     </resources>
     <classes>
         <class className="GRTDetailViewController" superclassName="UIViewController">
