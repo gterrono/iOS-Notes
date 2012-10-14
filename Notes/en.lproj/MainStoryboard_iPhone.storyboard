@@ -36,11 +36,11 @@
             </objects>
             <point key="canvasLocation" x="1060" y="-213"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Notes-->
         <scene sceneID="LVJ-Q7-P1z">
             <objects>
                 <navigationController definesPresentationContext="YES" id="BmV-vH-40x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="shoebox.png" id="1rY-on-wOd"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="shoebox.png" id="1rY-on-wOd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="APr-SA-sea">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
