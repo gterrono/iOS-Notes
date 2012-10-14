@@ -1,6 +1,6 @@
 Notes
 =====
-A note taking app.
+An app for taking notes.
 
 Design Decisions
 ----------------
