@@ -14,6 +14,8 @@
     NSMutableArray *_objects;
 }
 @property (strong, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) CLLocation *lastLocation;
 @end
 
 @implementation GRTMasterViewController
@@ -24,6 +26,7 @@
         self.clearsSelectionOnViewWillAppear = NO;
         self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
     }
+    
     [super awakeFromNib];
 }
 
@@ -35,12 +38,22 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (GRTDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController = (GRTDetailViewController *)[	[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"reloading");
+    if(nil == _locationManager)
+        _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    _locationManager.distanceFilter = 500;
+    
+    [_locationManager startUpdatingLocation];
     [_table reloadData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [_locationManager stopUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +67,7 @@
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
-    [_objects insertObject:[GRTNote newNote] atIndex:0];
+    [_objects insertObject:[GRTNote newNoteWithLocation:_lastLocation] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -127,6 +140,10 @@
         GRTNote *object = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    _lastLocation = [locations lastObject];
 }
 
 @end

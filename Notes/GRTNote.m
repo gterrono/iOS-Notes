@@ -13,10 +13,12 @@
 @synthesize title;
 @synthesize content;
 
-- (id) initWithTitle:(NSString*)t content:(NSString*)c {
+- (id) initWithTitle:(NSString*)t content:(NSString*)c location:(CLLocation*)l {
     if (self = [super init]) {
         self.title = t;
         self.content = c;
+        self.createdAt = [NSDate date];
+        self.location = l;
     }
     return self;
 }
@@ -25,8 +27,8 @@
     return title;
 }
 
-+ (id) newNote {
-    return [[self alloc] initWithTitle:@"New Note" content:@""];
++ (id) newNoteWithLocation:(CLLocation *)location {
+    return [[self alloc] initWithTitle:@"New Note" content:@"Enter your note here." location:location];
 }
 
 @end

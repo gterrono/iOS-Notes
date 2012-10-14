@@ -11,7 +11,7 @@
 
 @class GRTDetailViewController;
 
-@interface GRTMasterViewController : UITableViewController
+@interface GRTMasterViewController : UITableViewController <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) GRTDetailViewController *detailViewController;
 

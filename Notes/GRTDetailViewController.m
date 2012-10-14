@@ -11,6 +11,8 @@
 @interface GRTDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 @property (weak, nonatomic) IBOutlet UITextView *contentField;
+@property (weak, nonatomic) IBOutlet UILabel *locationField;
+@property (weak, nonatomic) IBOutlet UILabel *timeField;
 - (void)configureView;
 @end
 
@@ -40,6 +42,10 @@
         GRTNote *note = (GRTNote *)_detailItem;
         [_titleField setText:note.title];
         [_contentField setText:note.content];
+        if (note.location != nil) {
+            _locationField.text = [NSString stringWithFormat:@"(%+.4f, %+.4f)", note.location.coordinate.latitude, note.location.coordinate.longitude, nil];
+        }
+        _timeField.text = [note.createdAt description];
     }
 }
 

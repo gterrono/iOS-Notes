@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5353520162A5D76009874E4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D535351F162A5D76009874E4 /* CoreLocation.framework */; };
 		D5B3FC24162A12AF0033C0F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B3FC23162A12AF0033C0F7 /* UIKit.framework */; };
 		D5B3FC26162A12AF0033C0F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B3FC25162A12AF0033C0F7 /* Foundation.framework */; };
 		D5B3FC28162A12AF0033C0F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B3FC27162A12AF0033C0F7 /* CoreGraphics.framework */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D535351F162A5D76009874E4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D5B3FC1F162A12AF0033C0F7 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B3FC23162A12AF0033C0F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D5B3FC25162A12AF0033C0F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5353520162A5D76009874E4 /* CoreLocation.framework in Frameworks */,
 				D5B3FC24162A12AF0033C0F7 /* UIKit.framework in Frameworks */,
 				D5B3FC26162A12AF0033C0F7 /* Foundation.framework in Frameworks */,
 				D5B3FC28162A12AF0033C0F7 /* CoreGraphics.framework in Frameworks */,
@@ -110,6 +113,7 @@
 		D5B3FC14162A12AF0033C0F7 = {
 			isa = PBXGroup;
 			children = (
+				D535351F162A5D76009874E4 /* CoreLocation.framework */,
 				D5B3FC29162A12AF0033C0F7 /* Notes */,
 				D5B3FC5B162A12B10033C0F7 /* NotesTests */,
 				D5B3FC22162A12AF0033C0F7 /* Frameworks */,
@@ -503,6 +507,7 @@
 				D5B3FC68162A12B10033C0F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5B3FC69162A12B10033C0F7 /* Build configuration list for PBXNativeTarget "NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				D5B3FC6B162A12B10033C0F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

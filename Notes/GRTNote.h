@@ -7,16 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface GRTNote : NSObject {
-    NSString* title;
-    NSString* content;
-}
+@interface GRTNote : NSObject
+
 @property (retain) NSString* title;
 @property (retain) NSString* content;
+@property (retain) CLLocation* location;
+@property (retain) NSDate* createdAt;
 
 - (NSString*)description;
 
-+ (id)newNote;
++ (id)newNoteWithLocation:(CLLocation*)location;
 
 @end
