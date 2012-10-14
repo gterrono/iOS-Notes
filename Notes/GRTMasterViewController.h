@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "GRTNote.h"
+#import "GRTAppDelegate.h"
 
 @class GRTDetailViewController;
 

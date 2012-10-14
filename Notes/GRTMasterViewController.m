@@ -65,7 +65,7 @@
 - (void)insertNewObject:(id)sender
 {
     if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
+        _objects = ((GRTAppDelegate *)[[UIApplication sharedApplication] delegate]).notes;
     }
     [_objects insertObject:[GRTNote newNoteWithLocation:_lastLocation] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];

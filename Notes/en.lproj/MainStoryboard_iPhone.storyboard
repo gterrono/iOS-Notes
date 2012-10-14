@@ -71,6 +71,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map-marker.png" id="7"/>
+                    <connections>
+                        <outlet property="map" destination="d0D-0O-NO8" id="Gzj-Oy-jcJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,6 +174,32 @@
         <image name="map-marker.png" width="16" height="26"/>
         <image name="todo.png" width="18" height="19"/>
     </resources>
+    <classes>
+        <class className="GRTDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GRTDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="contentField" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="locationField" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeField" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="GRTFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GRTFirstViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="map" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="GRTMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GRTMasterViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

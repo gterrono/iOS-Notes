@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "GRTNote.h"
+#import "GRTAppDelegate.h"
 
 @interface GRTFirstViewController : UIViewController
 

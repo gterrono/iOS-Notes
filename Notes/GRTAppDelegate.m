@@ -13,6 +13,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    if (nil == _notes)
+        _notes = [[NSMutableArray alloc] init];
     return YES;
 }
 							

@@ -9,6 +9,7 @@
 #import "GRTFirstViewController.h"
 
 @interface GRTFirstViewController ()
+@property (weak, nonatomic) IBOutlet MKMapView *map;
 
 @end
 
@@ -18,6 +19,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSMutableArray *notes = ((GRTAppDelegate *)[[UIApplication sharedApplication] delegate]).notes;
+    for (int i=0; i<notes.count; i++) {
+        GRTNote *note = (GRTNote *)notes[i];
+        [_map setCenterCoordinate:note.location.coordinate];
+        MKPointAnnotation* annot = [[MKPointAnnotation alloc] init];
+        [annot setCoordinate: note.location.coordinate];
+        [annot setTitle:note.title];
+        [self.map addAnnotation:annot];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
