@@ -33,6 +33,8 @@
 		D5B3FCC6162A1D880033C0F7 /* map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FCC4162A1D880033C0F7 /* map-marker.png */; };
 		D5B3FCC8162A1DAA0033C0F7 /* todo.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FCC7162A1DAA0033C0F7 /* todo.png */; };
 		D5B3FCC9162A1DAA0033C0F7 /* todo.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B3FCC7162A1DAA0033C0F7 /* todo.png */; };
+		D5B3FCCC162A2C510033C0F7 /* GRTNote.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B3FCCB162A2C510033C0F7 /* GRTNote.m */; };
+		D5B3FCCD162A2C510033C0F7 /* GRTNote.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B3FCCB162A2C510033C0F7 /* GRTNote.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		D5B3FCBF162A14720033C0F7 /* GRTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTDetailViewController.m; sourceTree = "<group>"; };
 		D5B3FCC4162A1D880033C0F7 /* map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-marker.png"; sourceTree = "<group>"; };
 		D5B3FCC7162A1DAA0033C0F7 /* todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todo.png; sourceTree = "<group>"; };
+		D5B3FCCA162A2C510033C0F7 /* GRTNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRTNote.h; sourceTree = "<group>"; };
+		D5B3FCCB162A2C510033C0F7 /* GRTNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRTNote.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 				D5B3FC48162A12B00033C0F7 /* GRTSecondViewController.h */,
 				D5B3FC49162A12B00033C0F7 /* GRTSecondViewController.m */,
 				D5B3FC2A162A12AF0033C0F7 /* Supporting Files */,
+				D5B3FCCA162A2C510033C0F7 /* GRTNote.h */,
+				D5B3FCCB162A2C510033C0F7 /* GRTNote.m */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				D5B3FC4A162A12B00033C0F7 /* GRTSecondViewController.m in Sources */,
 				D5B3FCC0162A14720033C0F7 /* GRTMasterViewController.m in Sources */,
 				D5B3FCC2162A14720033C0F7 /* GRTDetailViewController.m in Sources */,
+				D5B3FCCC162A2C510033C0F7 /* GRTNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +327,7 @@
 				D5B3FC63162A12B10033C0F7 /* NotesTests.m in Sources */,
 				D5B3FCC1162A14720033C0F7 /* GRTMasterViewController.m in Sources */,
 				D5B3FCC3162A14720033C0F7 /* GRTDetailViewController.m in Sources */,
+				D5B3FCCD162A2C510033C0F7 /* GRTNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

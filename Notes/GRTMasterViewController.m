@@ -13,6 +13,7 @@
 @interface GRTMasterViewController () {
     NSMutableArray *_objects;
 }
+@property (strong, nonatomic) IBOutlet UITableView *table;
 @end
 
 @implementation GRTMasterViewController
@@ -37,6 +38,11 @@
     self.detailViewController = (GRTDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"reloading");
+    [_table reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -48,7 +54,7 @@
     if (!_objects) {
         _objects = [[NSMutableArray alloc] init];
     }
-    [_objects insertObject:[NSDate date] atIndex:0];
+    [_objects insertObject:[GRTNote newNote] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -69,7 +75,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
+    GRTNote *object = _objects[indexPath.row];
     cell.textLabel.text = [object description];
     return cell;
 }
@@ -109,7 +115,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        NSDate *object = _objects[indexPath.row];
+        GRTNote *object = _objects[indexPath.row];
         self.detailViewController.detailItem = object;
     }
 }
@@ -118,7 +124,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
+        GRTNote *object = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }

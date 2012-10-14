@@ -10,6 +10,7 @@
 
 @interface GRTDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (weak, nonatomic) IBOutlet UITextView *contentField;
 - (void)configureView;
 @end
 
@@ -25,18 +26,20 @@
         // Update the view.
         [self configureView];
     }
-
+    
     if (self.masterPopoverController != nil) {
         [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
+    }
 }
 
 - (void)configureView
 {
     // Update the user interface for the detail item.
-
+    
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        GRTNote *note = (GRTNote *)_detailItem;
+        [_titleField setText:note.title];
+        [_contentField setText:note.content];
     }
 }
 
@@ -45,6 +48,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    GRTNote *note = (GRTNote *)_detailItem;
+    note.title = _titleField.text;
+    note.content = _contentField.text;
 }
 
 - (void)didReceiveMemoryWarning

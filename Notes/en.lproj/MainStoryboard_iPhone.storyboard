@@ -28,6 +28,9 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="iGU-Px-d1e"/>
+                    <connections>
+                        <outlet property="table" destination="Ifu-z2-hg0" id="xCQ-Pi-Fsv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ci4-M2-7BX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,25 +98,31 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OG6-WJ-RLN">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="f7v-ud-yw8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxC-wK-U8v">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWi-gv-79D">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="OG6-WJ-RLN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3hm-DC-idR"/>
-                            <constraint firstItem="OG6-WJ-RLN" firstAttribute="leading" secondItem="1SM-5z-iUk" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8li-vn-cWG"/>
-                            <constraint firstItem="OG6-WJ-RLN" firstAttribute="top" secondItem="1SM-5z-iUk" secondAttribute="top" constant="217" id="Odm-Q7-mMs"/>
+                            <constraint firstItem="OxC-wK-U8v" firstAttribute="trailing" secondItem="1SM-5z-iUk" secondAttribute="trailing" type="default" id="G48-Gf-qWq"/>
+                            <constraint firstItem="UWi-gv-79D" firstAttribute="top" secondItem="1SM-5z-iUk" secondAttribute="top" type="default" id="HiU-7o-AW9"/>
+                            <constraint firstItem="UWi-gv-79D" firstAttribute="trailing" secondItem="1SM-5z-iUk" secondAttribute="trailing" type="default" id="Kki-hF-RHe"/>
+                            <constraint firstItem="OxC-wK-U8v" firstAttribute="bottom" secondItem="1SM-5z-iUk" secondAttribute="bottom" type="default" id="MoN-ts-pZ1"/>
+                            <constraint firstItem="UWi-gv-79D" firstAttribute="leading" secondItem="1SM-5z-iUk" secondAttribute="leading" type="default" id="XxS-Xa-igy"/>
+                            <constraint firstItem="OxC-wK-U8v" firstAttribute="leading" secondItem="1SM-5z-iUk" secondAttribute="leading" type="default" id="ZMP-UM-qDg"/>
+                            <constraint firstItem="OxC-wK-U8v" firstAttribute="top" secondItem="UWi-gv-79D" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jrK-b7-e0W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hJB-Uv-N2U"/>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="OG6-WJ-RLN" id="22n-bq-bMd"/>
+                        <outlet property="contentField" destination="OxC-wK-U8v" id="BkJ-DE-MaK"/>
+                        <outlet property="titleField" destination="UWi-gv-79D" id="SGS-Oy-oBU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgG-GH-pXW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,7 +157,8 @@
         <class className="GRTDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GRTDetailViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="contentField" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="GRTFirstViewController" superclassName="UIViewController">
@@ -156,6 +166,9 @@
         </class>
         <class className="GRTMasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GRTMasterViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
